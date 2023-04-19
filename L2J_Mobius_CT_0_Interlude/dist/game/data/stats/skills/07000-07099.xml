@@ -1,0 +1,935 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="7000" levels="1" name="NPC Default">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7001" levels="1" name="Dispel Buff">
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="100" />
+		<set name="effectRange" val="900" />
+		<set name="magicLevel" val="99" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="DispelByCategory">
+				<param slot="buff" rate="100" max="20" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7002" levels="1" name="Dispel Debuff">
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="100" />
+		<set name="effectRange" val="900" />
+		<set name="magicLevel" val="99" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="DispelByCategory">
+				<param slot="debuff" rate="100" max="20" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7003" levels="1" name="Dispel All">
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="100" />
+		<set name="effectRange" val="900" />
+		<set name="magicLevel" val="99" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="DispelByCategory">
+				<param slot="buff" rate="100" max="20" />
+			</effect>
+			<effect name="DispelByCategory">
+				<param slot="debuff" rate="100" max="20" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7004" levels="2" name="Dispel Petrification">
+		<!-- Cures petrification with the effect of 2 or less. -->
+		<set name="effectPoint" val="566" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="60" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="10000" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DispelBySlot">
+				<param dispel="TURN_STONE,2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7005" levels="4" name="Greater Chant of Vampire">
+		<!-- Temporarily allows party members to partially restore HP using damage inflicted upon the enemy. Excludes damage from skill or range attack. Effect 4. -->
+		<set name="abnormalLevel" val="4" />
+		<set name="abnormalTime" val="1200" />
+		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="655" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="74" />
+		<set name="mpConsume" val="217" />
+		<set name="mpInitialConsume" val="55" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="20000" />
+		<set name="targetType" val="CLAN_MEMBER" />
+		<for>
+			<effect name="Buff">
+				<add stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="7006" levels="13" name="The Love of Pa'agrio">
+		<!-- Greatly enhances alliance members' HP restoration. Effect 6. -->
+		<set name="abnormalLevel" val="6" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="LIFE_FORCE_OTHERS" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="655" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="2500" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="mpConsume" val="272" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="20000" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7007" levels="4" name="Greater Seal of Flame">
+		<!-- A protective ring of fire that continuously reduces HP of surrounding enemies and their alliance members. Effect 8. -->
+		<set name="abnormalLevel" val="8" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="DOT_ATTR" />
+		<set name="activateRate" val="35" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="-409" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="mpConsume" val="153" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="20000" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7008" levels="1" name="not_used">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7009" levels="1" name="not_used">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7010" levels="1" name="not_used">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7011" levels="1" name="not_used">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7012" levels="1" name="not_used">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7013" levels="1" name="not_used">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7014" levels="1" name="Test - Critical Damage Up">
+		<set name="abnormalVisualEffect" val="NONE" />
+		<set name="magicLevel" val="85" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7015" levels="1" name="Test - Critical Damage Down">
+		<set name="abnormalVisualEffect" val="NONE" />
+		<set name="magicLevel" val="85" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7016" levels="1" name="Test - Critical Damage Up">
+		<set name="abnormalVisualEffect" val="NONE" />
+		<set name="magicLevel" val="85" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7017" levels="1" name="Test - Critical Damage Down">
+		<set name="abnormalVisualEffect" val="NONE" />
+		<set name="magicLevel" val="85" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7018" levels="1" name="Test - Critical Rate Up">
+		<set name="abnormalVisualEffect" val="NONE" />
+		<set name="magicLevel" val="85" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7019" levels="1" name="Test - Critical Rate Down">
+		<set name="abnormalVisualEffect" val="NONE" />
+		<set name="magicLevel" val="85" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7020" levels="1" name="Test - Critical Rate Up">
+		<set name="abnormalVisualEffect" val="NONE" />
+		<set name="magicLevel" val="85" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7021" levels="1" name="Test - Critical Rate Down">
+		<set name="abnormalVisualEffect" val="NONE" />
+		<set name="magicLevel" val="85" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7022" levels="1" name="Test - Find Hidden Door">
+		<set name="affectLimit" val="6-12" />
+		<set name="hitTime" val="1000" />
+		<set name="magicLevel" val="85" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7023" levels="1" name="not_used">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7024" levels="1" name="not_used">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7025" levels="1" name="not_used">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7026" levels="1" name="not_used">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7027" levels="1" name="not_used">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="7028" levels="1" name="For Stationary NPCs">
+		<set name="magicLevel" val="99" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="DefenceTrait">
+				<param DERANGEMENT="100" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7029" levels="4" name="Super Haste">
+		<!-- Speed is increased. -->
+		<table name="#amount">1 1 1 1</table>
+		<table name="#mAtkSpd">2 3 4 5</table>
+		<table name="#pAtk">250 500 750 1500</table>
+		<table name="#mAtk">250 500 750 1500</table>
+		<table name="#pAtkSpd">2 3 4 5</table>
+		<table name="#reuse">0.01 0.01 0.01 0.01</table>
+		<table name="#runSpd">2 3 4 5</table>
+		<set name="effectPoint" val="1" />
+		<set name="icon" val="icon.skill7029" />
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="T" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="#pAtkSpd" />
+				<mul stat="runSpd" val="#runSpd" />
+				<mul stat="mAtkSpd" val="#mAtkSpd" />
+				<mul stat="pAtk" val="#pAtk" />
+				<mul stat="mAtk" val="#mAtk" /> <!-- custom -->
+				<mul stat="pReuse" val="#reuse" />
+				<mul stat="mReuse" val="#reuse" />
+				<mul stat="regHp" val="#amount" />
+				<mul stat="regMp" val="#amount" />
+				<mul stat="maxMp" val="#amount" />
+				<mul stat="weightLimit" val="#amount" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7030" levels="1" name="Summon King Bugbear">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="8" />
+		<set name="itemConsumeId" val="1458" /> <!-- Crystal: D-Grade -->
+		<set name="magicLevel" val="1" />
+		<set name="mpConsume" val="3" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="4000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canSummon="true" />
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="20150" />
+				<param lifeTime="1200" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7031" levels="1" name="Summon Skeleton Royal Guard">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="8" />
+		<set name="itemConsumeId" val="1458" /> <!-- Crystal: D-Grade -->
+		<set name="magicLevel" val="1" />
+		<set name="mpConsume" val="3" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="4000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canSummon="true" />
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="20169" />
+				<param lifeTime="1200" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7032" levels="1" name="Summon Hunter Gargoyle">
+		<set name="hitTime" val="4000" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="itemConsumeCount" val="8" />
+		<set name="itemConsumeId" val="1458" /> <!-- Crystal: D-Grade -->
+		<set name="magicLevel" val="1" />
+		<set name="mpConsume" val="3" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="4000" />
+		<set name="targetType" val="SELF" />
+		<cond>
+			<player canSummon="true" />
+		</cond>
+		<for>
+			<effect name="Summon">
+				<param npcId="20241" />
+				<param lifeTime="1200" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7033" levels="1" name="Test Flame Strike">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="7034" levels="1" name="Test Aqua Splash">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="7035" levels="1" name="Display - Swoop Cannon">
+		<!-- This aerial attack inflicts damage on a target inside the Outer Castle. -->
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="7036" levels="1" name="Display - Valakas">
+		<!-- Valakas Use Skill -->
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="7037" levels="1" name="Display - Tyrannosaurus Capture">
+		<!-- Tyrannosaurus Use Skill -->
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="7038" levels="1" name="Channeling DD Test: Short">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="7039" levels="1" name="Channeling DD Test: Middle">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="7040" levels="1" name="Channeling DD Test: Long">
+		<set name="magicLevel" val="1" />
+		<set name="operateType" val="P" />
+		<set name="targetType" val="NONE" />
+	</skill>
+	<skill id="7041" levels="1" name="Master's Blessing - Focus">
+		<!-- A GM is always by your side. Increases critical attack rate temporarily. Effect 3. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="CRITICAL_PROB_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1077" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="52" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="critRate" val="1.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7042" levels="1" name="Master's Blessing - Death Whisper">
+		<!-- A GM is always by your side. Increases critical attack rate temporarily. Effect 3. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="CRITICAL_DMG_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1242" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="56" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="critDmg" val="1.35" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7043" levels="1" name="Master's Blessing - Haste">
+		<!-- A GM is always by your side. Increases Atk. Spd. temporarily. Effect 2. -->
+		<set name="abnormalLevel" val="2" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1086" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="52" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7044" levels="1" name="Master's Blessing - Guidance">
+		<!-- A GM is always by your side. Increases Accuracy temporarily. Effect 3. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="HIT_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1240" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="56" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<add stat="accCombat" val="4" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7045" levels="1" name="Master's Blessing - Blessed Body">
+		<!-- A GM is always by your side. Increases maximum HP temporarily. Effect 6. -->
+		<set name="abnormalLevel" val="6" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="MAX_HP_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1045" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="72" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="1.35" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7046" levels="1" name="Master's Blessing - Blessed Soul">
+		<!-- A GM is always by your side. Increases maximum MP temporarily. Effect 6. -->
+		<set name="abnormalLevel" val="6" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="MAX_MP_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1048" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="70" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="1.35" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7047" levels="1" name="Master's Blessing - Agility">
+		<!-- A GM is always by your side. Increases Evasion temporarily. Effect 3. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="AVOID_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1087" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="52" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<add stat="rEvas" val="4" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7048" levels="1" name="Master's Blessing - Acumen">
+		<!-- A GM is always by your side. Increases Casting Spd. temporarily. Effect 3. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="CASTING_TIME_DOWN" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1085" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="48" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="1.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7049" levels="1" name="Master's Blessing - Decrease Weight">
+		<!-- A GM is always by your side. Reduces current weight. Effect 3. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="DECREASE_WEIGHT_PENALTY" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1257" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="52" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<add stat="weightPenalty" val="9000" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7050" levels="1" name="Master's Blessing - Might">
+		<!-- A GM is always by your side. Increases P. Atk. temporarily. Effect 3. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="PA_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1068" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="40" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7051" levels="1" name="Master's Blessing - Shield">
+		<!-- A GM is always by your side. Increases P. Def. temporarily. Effect 3. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="PD_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1040" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="44" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7052" levels="1" name="Master's Blessing - Magic Barrier">
+		<!-- A GM is always by your side. Increases M. Def. temporarily. Effect 3. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="PD_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1036" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="52" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mDef" val="1.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7053" levels="1" name="Master's Blessing - Vampiric Rage">
+		<!-- A GM is always by your side. Temporarily increases the amount of HP absorbed from damage done to a target. Excludes damage from skills or ranged attacks. Effect 4. -->
+		<set name="abnormalLevel" val="4" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1268" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="72" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<add stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="7054" levels="1" name="Master's Blessing - Empower">
+		<!-- A GM is always by your side. Increases M. Atk. temporarily. Effect 3. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="MA_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1059" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="52" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.75" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7055" levels="1" name="Master's Blessing - Wind Walk">
+		<!-- A GM is always by your side. Increases Speed temporarily. Effect 2. -->
+		<set name="abnormalLevel" val="2" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="SPEED_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1204" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="30" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<add stat="runSpd" val="33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7056" levels="1" name="Master's Blessing - Berserker Spirit">
+		<!-- A GM is always by your side. Temporarily reduces P. Def., M. Def. and Evasion, and increases P. Atk., M. Atk., Atk. Spd., Casting Spd. and Speed. Effect 2. -->
+		<set name="abnormalLevel" val="2" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="BERSERKER" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1062" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="52" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.16" />
+				<mul stat="pAtk" val="1.08" />
+				<mul stat="mDef" val="0.84" />
+				<mul stat="pDef" val="0.92" />
+				<mul stat="mAtkSpd" val="1.08" />
+				<mul stat="pAtkSpd" val="1.08" />
+				<add stat="runSpd" val="8" />
+				<sub stat="rEvas" val="4" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7057" levels="1" name="Master's Blessing - Greater Might">
+		<!-- A GM is always by your side. Temporarily increases the target's P. Atk. Effect 3. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="PA_PD_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1388" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="74" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtk" val="1.1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7058" levels="1" name="Master's Blessing - Greater Shield">
+		<!-- A GM is always by your side. Temporarily increases the target's P. Def. Effect 3. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="PA_PD_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1389" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="74" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7059" levels="1" name="Master's Blessing - Wild Magic">
+		<!-- A GM is always by your side. Temporarily increases the critical attack rate for magic attacks. Effect 2. -->
+		<set name="abnormalLevel" val="2" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="MAGIC_CRITICAL_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1303" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="70" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<add stat="mCritRate" val="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7060" levels="1" name="Master's Blessing - Clarity">
+		<!-- A GM is always by your side. Temporarily decreases the target's MP consumption for skills. Effect 3. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="CHEAP_MAGIC" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1397" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="74" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="magicalMpConsumeRate" val="0.9" />
+				<mul stat="physicalMpConsumeRate" val="0.8" />
+				<mul stat="danceMpConsumeRate" val="0.8" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7061" levels="1" name="Master's Blessing - Prophecy of Water">
+		<!-- A GM is always by your side. The spirit of an ancient wizard temporarily possesses the target. -->
+		<set name="abnormalLevel" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="600" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1355" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="78" />
+		<set name="mpConsume" val="1" />
+		<set name="mpInitialConsume" val="1" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<add stat="mCritRate" val="2" />
+				<mul stat="regMp" val="1.2" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pDef" val="1.2" />
+				<mul stat="pAtkSpd" val="1.2" />
+				<mul stat="mAtk" val="1.2" />
+				<mul stat="mDef" val="1.2" />
+				<mul stat="mAtkSpd" val="1.2" />
+				<sub stat="debuffVuln" val="10" />
+				<mul stat="runSpd" val="0.8" />
+				<mul stat="magicalMpConsumeRate" val="0.95" />
+				<mul stat="physicalMpConsumeRate" val="0.95" />
+				<mul stat="danceMpConsumeRate" val="0.95" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7062" levels="1" name="Master's Blessing - Prophecy of Fire">
+		<!-- A GM is always by your side. The spirit of an ancient warrior temporarily possesses the target. -->
+		<set name="abnormalLevel" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1356" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="78" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="1.2" />
+				<mul stat="regHp" val="1.2" />
+				<add stat="mCritRate" val="2" />
+				<mul stat="critDmg" val="1.2" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pDef" val="1.2" />
+				<mul stat="pAtkSpd" val="1.2" />
+				<mul stat="mAtk" val="1.2" />
+				<mul stat="mDef" val="1.2" />
+				<mul stat="mAtkSpd" val="1.2" />
+				<add stat="accCombat" val="4" />
+				<sub stat="debuffVuln" val="10" />
+				<mul stat="runSpd" val="0.8" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="7063" levels="1" name="Master's Blessing - Prophecy of Wind">
+		<!-- A GM is always by your side. The spirit of an ancient assassin temporarily possesses the target. -->
+		<set name="abnormalLevel" val="1" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1357" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="78" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="1.2" />
+				<mul stat="critRate" val="1.2" />
+				<mul stat="mCritPower" val="1.2" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pDef" val="1.2" />
+				<mul stat="pAtkSpd" val="1.2" />
+				<mul stat="mAtk" val="1.2" />
+				<mul stat="mDef" val="1.2" />
+				<mul stat="mAtkSpd" val="1.2" />
+				<sub stat="debuffVuln" val="10" />
+				<mul stat="runSpd" val="0.8" />
+				<add stat="absorbDam" val="5" /> <!-- absorb 5% HP from damage inflicted on enemies -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="7064" levels="1" name="Master's Blessing - Chant of Victory">
+		<!-- A GM is always by your side. The spirit of an ancient hero temporarily possesses the target. -->
+		<set name="abnormalLevel" val="2" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="MULTI_BUFF" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="1" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="500" />
+		<set name="icon" val="icon.skill1363" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="78" />
+		<set name="mpConsume" val="2" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="MaxHp">
+				<param power="20" />
+				<param type="PER" />
+				<param heal="true" />
+				<add stat="mCritRate" val="2" />
+				<mul stat="critDmg" val="1.2" />
+				<mul stat="pAtk" val="1.1" />
+				<mul stat="pDef" val="1.2" />
+				<mul stat="pAtkSpd" val="1.2" />
+				<mul stat="mAtk" val="1.2" />
+				<mul stat="mDef" val="1.2" />
+				<mul stat="mAtkSpd" val="1.2" />
+				<sub stat="debuffVuln" val="10" />
+				<add stat="accCombat" val="4" />
+				<mul stat="runSpd" val="0.8" />
+			</effect>
+		</for>
+	</skill>
+</list>

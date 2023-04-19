@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="item">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" name="set">
+								<xs:complexType>
+									<xs:attribute name="name" type="xs:string" use="required" />
+									<xs:attribute name="val" type="xs:string" use="required" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="cond">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" name="and">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element maxOccurs="unbounded" name="player">
+														<xs:complexType>
+															<xs:attribute name="castle" type="xs:byte" use="optional" />
+															<xs:attribute name="pledgeClass" type="xs:byte" use="optional" />
+															<xs:attribute name="races" type="xs:string" use="optional" />
+															<xs:attribute name="clanHall" type="xs:byte" use="optional" />
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="player">
+											<xs:complexType>
+												<xs:attribute name="races" type="xs:string" use="optional" />
+												<xs:attribute name="isPvpFlagged" type="xs:boolean" use="optional" />
+												<xs:attribute name="categoryType" type="xs:string" use="optional" />
+												<xs:attribute name="isHero" type="xs:boolean" use="optional" />
+												<xs:attribute name="sex" type="xs:unsignedByte" use="optional" />
+												<xs:attribute name="pkCount" type="xs:unsignedByte" use="optional" />
+												<xs:attribute name="pledgeClass" type="xs:unsignedByte" use="optional" />
+												<xs:attribute name="level" type="xs:unsignedByte" use="optional" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="msgId" type="xs:unsignedShort" use="required" />
+									<xs:attribute name="addName" type="xs:unsignedByte" use="optional" />
+								</xs:complexType>
+							</xs:element>
+							<xs:element minOccurs="0" name="for">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:choice maxOccurs="unbounded">
+											<xs:element maxOccurs="unbounded" name="set">
+												<xs:complexType>
+													<xs:attribute name="stat" type="xs:string" use="required" />
+													<xs:attribute name="val" type="xs:unsignedShort" use="required" />
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="add">
+												<xs:complexType>
+													<xs:attribute name="stat" type="xs:string" use="required" />
+													<xs:attribute name="val" type="xs:decimal" use="required" />
+													<xs:attribute name="order" type="xs:unsignedByte" use="optional" />
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="sub">
+												<xs:complexType>
+													<xs:attribute name="stat" type="xs:string" use="required" />
+													<xs:attribute name="val" type="xs:unsignedByte" use="required" />
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="enchant">
+												<xs:complexType>
+													<xs:attribute name="stat" type="xs:string" use="required" />
+													<xs:attribute name="val" type="xs:unsignedByte" use="required" />
+												</xs:complexType>
+											</xs:element>
+										</xs:choice>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:unsignedShort" use="required" />
+						<xs:attribute name="type" type="xs:string" use="required" />
+						<xs:attribute name="name" type="xs:string" use="required" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

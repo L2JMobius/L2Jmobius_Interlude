@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="5200" levels="8" name="Pet Recharge">
+		<!-- Regenerates MP. -->
+		<table name="#amount">120 124 128 138 144 149 153 155</table>
+		<table name="#effectPoints">604 617 630 659 676 689 700 709</table>
+		<table name="#magicLevel">65 67 69 75 80 85 90 95</table>
+		<table name="#mpConsume">96 99 102 110 116 120 122 124</table>
+		<table name="#mpInitialConsume">24 25 26 28 29 30 31 31</table>
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="6000" />
+		<set name="icon" val="icon.skill1013" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A1" />
+		<set name="reuseDelay" val="12000" />
+		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="ManaHealByLevel">
+				<param power="#amount" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5201" levels="6" name="Pet Concentration">
+		<!-- Temporarily lowers the probability of magic being canceled due to damage taken taken. -->
+		<table name="#abnormalLevels">1 2 3 4 5 6</table>
+		<table name="#cancel">18 25 36 42 48 53</table>
+		<table name="#effectPoints">204 285 418 495 566 624</table>
+		<table name="#magicLevel">20 30 44 52 60 68</table>
+		<table name="#mpConsume">16 21 31 38 44 51</table>
+		<table name="#mpInitialConsume">4 6 8 10 11 13</table>
+		<set name="abnormalLevel" val="#abnormalLevels" />
+		<set name="abnormalTime" val="120" />
+		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
+		<set name="castRange" val="400" />
+		<set name="effectPoint" val="#effectPoints" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1078" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="targetType" val="OWNER_PET" />
+		<for>
+			<effect name="Buff">
+				<sub stat="cancel" val="#cancel" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5202" levels="12" name="NPC Ranged Stun">
+		<!-- Temporarily gets thrown into a state of shock and immobilized. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">7 10 14 19 25 31 36 38 40 42 42 43</table>
+		<set name="abnormalLevel" val="1" />
+		<set name="abnormalTime" val="9" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
+		<set name="activateRate" val="50" />
+		<set name="affectLimit" val="10-10" />
+		<set name="affectRange" val="150" />
+		<set name="basicProperty" val="CON" />
+		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
+		<set name="hitTime" val="4000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="targetType" val="AURA" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="Stun" />
+		</for>
+	</skill>
+	<skill id="5203" levels="12" name="NPC Ranged Fear">
+		<!-- Temporarily becomes overcome with fear and flees mindlessly. -->
+		<table name="#magicLevel">10 20 30 40 50 60 70 75 80 85 90 95</table>
+		<table name="#mpConsume">7 10 14 19 25 31 36 38 40 42 42 43</table>
+		<set name="abnormalLevel" val="1" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
+		<set name="activateRate" val="50" />
+		<set name="affectLimit" val="10-10" />
+		<set name="affectRange" val="150" />
+		<set name="basicProperty" val="MEN" />
+		<set name="coolTime" val="500" />
+		<set name="effectPoint" val="-100" />
+		<set name="hitTime" val="4000" />
+		<set name="icon" val="icon.skill1092" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLevel" val="#magicLevel" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="targetType" val="AURA" />
+		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="Fear" />
+		</for>
+	</skill>
+	<skill id="5204" levels="1" name="Production-First Gigantic Pig Combination">
+		<set name="hitTime" val="5800" />
+		<set name="magicLevel" val="76" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="SELF" />
+	</skill>
+	<skill id="5205" levels="1" name="Boss Regeneration">
+		<set name="magicLevel" val="99" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="HealPercent">
+				<param power="100" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5206" levels="1" name="Decrease Speed">
+		<!-- Curse of the Pig: Instantly reduces Speed. Effect 1. -->
+		<set name="abnormalLevel" val="1" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="SPEED_DOWN" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="2000" />
+		<set name="icon" val="icon.skill1160" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="2" />
+		<set name="magicLevel" val="95" />
+		<set name="mpConsume" val="62" />
+		<set name="mpInitialConsume" val="16" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="8000" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul stat="runSpd" val="0.85" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5207" levels="1" name="Decrease Atk. Spd.">
+		<!-- Curse of the Pig: Instantly reduces Atk. Spd. Effect 1. -->
+		<set name="abnormalLevel" val="1" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="ATTACK_TIME_UP" />
+		<set name="activateRate" val="80" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="600" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="1500" />
+		<set name="icon" val="icon.skill4038" />
+		<set name="isDebuff" val="true" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLevel" val="95" />
+		<set name="mpConsume" val="62" />
+		<set name="mpInitialConsume" val="16" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="8000" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Debuff">
+				<mul stat="pAtkSpd" val="0.85" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5208" levels="1" name="Golden Pig Wind Walk">
+		<!-- Temporarily increases Speed. Effect 2. -->
+		<set name="abnormalLevel" val="3" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="SPEED_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="icon" val="icon.skill1204" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="60" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<add stat="runSpd" val="33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5209" levels="1" name="Golden Pig Shield">
+		<!-- Temporarily increases P. Def. Effect 3. -->
+		<set name="abnormalLevel" val="4" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="PD_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="icon" val="icon.skill1040" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="60" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pDef" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5210" levels="1" name="Golden Pig Blessed Body">
+		<!-- Temporarily increases maximum HP. Effect 6. -->
+		<set name="abnormalLevel" val="7" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="MAX_HP_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="icon" val="icon.skill1045" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="60" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxHp" val="1.35" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5211" levels="1" name="Golden Pig Vampiric Rage">
+		<!-- Uses damage inflicted upon an enemy to temporarily restore HP. Excludes damage inflicted by skill or remote attack. Effect 4. -->
+		<set name="abnormalLevel" val="5" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="VAMPIRIC_ATTACK" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="icon" val="icon.skill1268" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="60" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<add stat="absorbDam" val="9" /> <!-- absorb 9% HP from damage inflicted on enemies -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="5212" levels="1" name="Golden Pig Regeneration">
+		<!-- Temporarily increases ability to restore HP. Effect 3. -->
+		<set name="abnormalLevel" val="4" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="HP_REGEN_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="icon" val="icon.skill1044" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="60" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="regHp" val="1.2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5213" levels="1" name="Golden Pig Haste">
+		<!-- Temporarily increases Atk. Spd. Effect 1. -->
+		<set name="abnormalLevel" val="2" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="ATTACK_TIME_DOWN" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="icon" val="icon.skill1086" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="60" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="pAtkSpd" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5214" levels="1" name="Golden Pig Blessed Soul">
+		<!-- Temporarily increases maximum MP. Effect 6. -->
+		<set name="abnormalLevel" val="7" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="MAX_MP_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="icon" val="icon.skill1048" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="60" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="maxMp" val="1.35" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5215" levels="1" name="Golden Pig Acumen">
+		<!-- Temporarily increases Casting Spd. Effect 3. -->
+		<set name="abnormalLevel" val="4" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="CASTING_TIME_DOWN" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="icon" val="icon.skill1085" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="60" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtkSpd" val="1.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5216" levels="1" name="Golden Pig Concentration">
+		<!-- Temporarily decreases the probability of magic being canceled due to damage taken. Effect 1. -->
+		<set name="abnormalLevel" val="2" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="CANCEL_PROB_DOWN" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="icon" val="icon.skill1078" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="60" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<sub stat="cancel" val="18" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5217" levels="1" name="Golden Pig Empower">
+		<!-- Temporarily increases M. Atk. Effect 1. -->
+		<set name="abnormalLevel" val="2" />
+		<set name="abnormalTime" val="3600" />
+		<set name="abnormalType" val="MA_UP" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="icon" val="icon.skill1059" />
+		<set name="isMagic" val="1" /> <!-- Magic Skill -->
+		<set name="magicLevel" val="60" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="ONE" />
+		<for>
+			<effect name="Buff">
+				<mul stat="mAtk" val="1.55" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="5218" levels="1" name="Production: Event Teleport">
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+		<set name="hitTime" val="2000" />
+		<set name="magicLevel" val="76" />
+		<set name="operateType" val="A1" />
+		<set name="targetType" val="ONE" />
+	</skill>
+	<skill id="5219" levels="1" name="Huge Pig Stun">
+		<!-- Curse of the Huge Pig: Target is temporarily stunned and immoblized. -->
+		<set name="abnormalLevel" val="1" />
+		<set name="abnormalTime" val="9" />
+		<set name="abnormalType" val="STUN" />
+		<set name="abnormalVisualEffect" val="STUN" />
+		<set name="activateRate" val="50" />
+		<set name="affectLimit" val="10-10" />
+		<set name="affectRange" val="200" />
+		<set name="basicProperty" val="CON" />
+		<set name="castRange" val="600" />
+		<set name="coolTime" val="2000" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="6000" />
+		<set name="isDebuff" val="true" />
+		<set name="lvlBonusRate" val="1" />
+		<set name="magicLevel" val="95" />
+		<set name="mpConsume" val="43" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="targetType" val="AREA" />
+		<set name="trait" val="SHOCK" />
+		<for>
+			<effect name="Stun" />
+		</for>
+	</skill>
+	<skill id="5220" levels="1" name="Huge Pig Fear">
+		<!-- Curse of the Huge Pig: Target is temporarily overcome with fear, causing it to flee mindlessly. -->
+		<set name="abnormalLevel" val="1" />
+		<set name="abnormalTime" val="15" />
+		<set name="abnormalType" val="TURN_FLEE" />
+		<set name="abnormalVisualEffect" val="TURN_FLEE" />
+		<set name="activateRate" val="50" />
+		<set name="affectLimit" val="10-10" />
+		<set name="affectRange" val="200" />
+		<set name="basicProperty" val="MEN" />
+		<set name="castRange" val="600" />
+		<set name="coolTime" val="2000" />
+		<set name="effectPoint" val="-100" />
+		<set name="effectRange" val="1100" />
+		<set name="hitTime" val="6000" />
+		<set name="isDebuff" val="true" />
+		<set name="magicLevel" val="95" />
+		<set name="mpConsume" val="43" />
+		<set name="operateType" val="A2" />
+		<set name="reuseDelay" val="6000" />
+		<set name="targetType" val="AREA" />
+		<set name="trait" val="DERANGEMENT" />
+		<for>
+			<effect name="Fear" />
+		</for>
+	</skill>
+</list>

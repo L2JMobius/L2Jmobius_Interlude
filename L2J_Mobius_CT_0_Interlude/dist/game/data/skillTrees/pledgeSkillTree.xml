@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/skillTrees.xsd">
+	<skillTree type="pledgeSkillTree">
+		<!-- Clan Skills -->
+		<skill skillName="Clan Cyclonic Resistance" skillId="384" skillLevel="1" getLevel="7" levelUpSp="5100">
+			<socialClass>BARON</socialClass>
+			<item id="8176" count="1" /> <!-- Destruction Tombstone -->
+		</skill>
+		<skill skillName="Clan Cyclonic Resistance" skillId="384" skillLevel="2" getLevel="8" levelUpSp="12000">
+			<socialClass>BARON</socialClass>
+			<item id="8176" count="1" /> <!-- Destruction Tombstone -->
+		</skill>
+		<skill skillName="Clan Magmatic Resistance" skillId="385" skillLevel="1" getLevel="7" levelUpSp="5100">
+			<socialClass>BARON</socialClass>
+			<item id="8176" count="1" /> <!-- Destruction Tombstone -->
+		</skill>
+		<skill skillName="Clan Magmatic Resistance" skillId="385" skillLevel="2" getLevel="8" levelUpSp="12000">
+			<socialClass>BARON</socialClass>
+			<item id="8176" count="1" /> <!-- Destruction Tombstone -->
+		</skill>
+		<skill skillName="Clan Resist Shock" skillId="386" skillLevel="1" getLevel="7" levelUpSp="5100">
+			<socialClass>BARON</socialClass>
+			<item id="8176" count="1" /> <!-- Destruction Tombstone -->
+		</skill>
+		<skill skillName="Clan Resist Shock" skillId="386" skillLevel="2" getLevel="8" levelUpSp="12000">
+			<socialClass>BARON</socialClass>
+			<item id="8176" count="1" /> <!-- Destruction Tombstone -->
+		</skill>
+		<skill skillName="Clan Resist Hold" skillId="387" skillLevel="1" getLevel="7" levelUpSp="5100">
+			<socialClass>BARON</socialClass>
+			<item id="8176" count="1" /> <!-- Destruction Tombstone -->
+		</skill>
+		<skill skillName="Clan Resist Hold" skillId="387" skillLevel="2" getLevel="8" levelUpSp="12000">
+			<socialClass>BARON</socialClass>
+			<item id="8176" count="1" /> <!-- Destruction Tombstone -->
+		</skill>
+		<skill skillName="Clan Resist Sleep" skillId="388" skillLevel="1" getLevel="7" levelUpSp="5100">
+			<socialClass>BARON</socialClass>
+			<item id="8176" count="1" /> <!-- Destruction Tombstone -->
+		</skill>
+		<skill skillName="Clan Resist Sleep" skillId="388" skillLevel="2" getLevel="8" levelUpSp="12000">
+			<socialClass>BARON</socialClass>
+			<item id="8176" count="1" /> <!-- Destruction Tombstone -->
+		</skill>
+		<skill skillName="Clan Wind Walk" skillId="389" skillLevel="1" getLevel="8" levelUpSp="11000">
+			<socialClass>VISCOUNT</socialClass>
+			<item id="8175" count="1" /> <!-- Cradle of Creation -->
+		</skill>
+		<skill skillName="Clan Luck" skillId="390" skillLevel="1" getLevel="7" levelUpSp="6900">
+			<socialClass>APPRENTICE</socialClass>
+			<item id="8175" count="1" /> <!-- Cradle of Creation -->
+		</skill>
+		<skill skillName="Clan Luck" skillId="390" skillLevel="2" getLevel="8" levelUpSp="14000">
+			<socialClass>APPRENTICE</socialClass>
+			<item id="8175" count="1" /> <!-- Cradle of Creation -->
+		</skill>
+		<skill skillName="Clan Imperium" skillId="391" skillLevel="1" getLevel="5">
+			<socialClass>KNIGHT</socialClass>
+			<item id="8176" count="1" /> <!-- Destruction Tombstone -->
+		</skill>
+	</skillTree>
+</list>
